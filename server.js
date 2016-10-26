@@ -17,7 +17,7 @@ app.get('/skor', function (req, res) {
     Sko.find({},function(err, data){
       if(data.length<=0){
         for(var i=0; i<10; i++){
-          console.log(dummyGen.smasher().save())
+          dummyGen.smasher().save();
         }
         res.json(JSON.stringify(data));
       }else {
@@ -25,6 +25,8 @@ app.get('/skor', function (req, res) {
       }
     })
 });
+
+
 
 var port = 3000;
 app.listen(port, () => console.log("Server up and running on port: "+port));

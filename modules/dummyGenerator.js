@@ -21,12 +21,9 @@ module.exports = {
       color: [this.colorArr[Math.floor(Math.random()*this.colorArr.length)],this.colorArr[Math.floor(Math.random()*this.colorArr.length)],this.colorArr[Math.floor(Math.random()*this.colorArr.length)]],
       type: this.typeArr[Math.floor(Math.random()*this.typeArr.length)],
       price: this.priceArr[Math.floor(Math.random()*this.priceArr.length)],
-      campaign: randomBool,
-      priceOff: function() {
-        console.log(this.campaign)
-      },
+      campaign: randomBool
     });
-    console.log(enSko)
+
     return enSko;
   }
 }
